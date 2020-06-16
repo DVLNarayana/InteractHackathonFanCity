@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* InteractHackathonFanCityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* InteractHackathonFanCityTests.m */; };
+		06530E5824993FBD002A07AA /* Relative-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06530E5524993FBD002A07AA /* Relative-Book.otf */; };
+		06530E5924993FBD002A07AA /* Relative-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06530E5624993FBD002A07AA /* Relative-Bold.otf */; };
+		06530E5A24993FBD002A07AA /* SignifyRaisonne-DemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 06530E5724993FBD002A07AA /* SignifyRaisonne-DemiBold.otf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -44,6 +47,9 @@
 		00E356EE1AD99517003FC87E /* InteractHackathonFanCityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractHackathonFanCityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* InteractHackathonFanCityTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractHackathonFanCityTests.m; sourceTree = "<group>"; };
+		06530E5524993FBD002A07AA /* Relative-Book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Relative-Book.otf"; path = "../app/assets/fonts/Relative-Book.otf"; sourceTree = "<group>"; };
+		06530E5624993FBD002A07AA /* Relative-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Relative-Bold.otf"; path = "../app/assets/fonts/Relative-Bold.otf"; sourceTree = "<group>"; };
+		06530E5724993FBD002A07AA /* SignifyRaisonne-DemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SignifyRaisonne-DemiBold.otf"; path = "../app/assets/fonts/SignifyRaisonne-DemiBold.otf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* InteractHackathonFanCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractHackathonFanCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = InteractHackathonFanCity/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = InteractHackathonFanCity/AppDelegate.m; sourceTree = "<group>"; };
@@ -57,12 +63,15 @@
 		476F517DEB82FC1327B6A1A4 /* Pods-InteractHackathonFanCity-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-tvOS.release.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-tvOS/Pods-InteractHackathonFanCity-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		4BDE8478114D51748457AC44 /* libPods-InteractHackathonFanCity-InteractHackathonFanCityTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InteractHackathonFanCity-InteractHackathonFanCityTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0CA950AA258CAB678722DA /* Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.debug.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-InteractHackathonFanCityTests/Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.debug.xcconfig"; sourceTree = "<group>"; };
+		529E1AB390CD4552BDF96DCF /* SignifyRaisonne-DemiBold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SignifyRaisonne-DemiBold.otf"; path = "../app/assets/fonts/SignifyRaisonne-DemiBold.otf"; sourceTree = "<group>"; };
 		596BD8A570C577C133FA7BA2 /* Pods-InteractHackathonFanCity-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-tvOS/Pods-InteractHackathonFanCity-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		67A8DADBB63AACE2C63C697A /* Pods-InteractHackathonFanCity-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-tvOSTests/Pods-InteractHackathonFanCity-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		790D2622E41F55A5F3544B72 /* Pods-InteractHackathonFanCity-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-tvOSTests/Pods-InteractHackathonFanCity-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		82CFDF4980C438B2C070DB0D /* libPods-InteractHackathonFanCity-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InteractHackathonFanCity-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2BD95BBCBB97E441E6C542E /* libPods-InteractHackathonFanCity-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InteractHackathonFanCity-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B11CA5D98D74489987AAE608 /* Relative-Book.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Relative-Book.otf"; path = "../app/assets/fonts/Relative-Book.otf"; sourceTree = "<group>"; };
 		B90B3A0CEC887DC38403E8C5 /* Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.release.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity-InteractHackathonFanCityTests/Pods-InteractHackathonFanCity-InteractHackathonFanCityTests.release.xcconfig"; sourceTree = "<group>"; };
+		CDE73346C6444F23A8C96706 /* Relative-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Relative-Bold.otf"; path = "../app/assets/fonts/Relative-Bold.otf"; sourceTree = "<group>"; };
 		DEC2B6BCDE2D46B3C5563553 /* Pods-InteractHackathonFanCity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractHackathonFanCity.debug.xcconfig"; path = "Target Support Files/Pods-InteractHackathonFanCity/Pods-InteractHackathonFanCity.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
@@ -122,6 +131,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		06530E4E24993A08002A07AA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDE73346C6444F23A8C96706 /* Relative-Bold.otf */,
+				B11CA5D98D74489987AAE608 /* Relative-Book.otf */,
+				529E1AB390CD4552BDF96DCF /* SignifyRaisonne-DemiBold.otf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		13B07FAE1A68108700A75B9A /* InteractHackathonFanCity */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,11 +178,15 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				06530E5624993FBD002A07AA /* Relative-Bold.otf */,
+				06530E5524993FBD002A07AA /* Relative-Book.otf */,
+				06530E5724993FBD002A07AA /* SignifyRaisonne-DemiBold.otf */,
 				13B07FAE1A68108700A75B9A /* InteractHackathonFanCity */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* InteractHackathonFanCityTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				06530E4E24993A08002A07AA /* Resources */,
 				B8AF36270E63B0015295B01F /* Pods */,
 			);
 			indentWidth = 2;
@@ -194,7 +217,6 @@
 				67A8DADBB63AACE2C63C697A /* Pods-InteractHackathonFanCity-tvOSTests.debug.xcconfig */,
 				790D2622E41F55A5F3544B72 /* Pods-InteractHackathonFanCity-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,6 +360,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06530E5824993FBD002A07AA /* Relative-Book.otf in Resources */,
+				06530E5924993FBD002A07AA /* Relative-Bold.otf in Resources */,
+				06530E5A24993FBD002A07AA /* SignifyRaisonne-DemiBold.otf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
