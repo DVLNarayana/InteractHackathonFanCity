@@ -2,7 +2,7 @@ import React from "react";
 import { TouchableOpacity, Image } from "./../../components";
 import images from "../../assets/images";
 
-const BackButton = props => {
+const BackButton = (props) => {
   return (
     <TouchableOpacity
       testID="hLeft"
@@ -10,7 +10,7 @@ const BackButton = props => {
         height: 44,
         width: 44,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
       }}
       onPress={() => {
         props.navigation.pop();

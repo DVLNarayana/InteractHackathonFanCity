@@ -1,20 +1,22 @@
 "use strict";
 
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { connect } from "react-redux";
 import {
   View,
   HeaderButton,
   Modal,
   TextBoxInputWithIcon,
-  TextView,
+  ScrollView,
   HeaderForModal,
+  MatchItem,
 } from "../../components";
 import styles from "./styles";
 import { showAlertMessage, canShowPageBusy } from "../../redux/app/actions";
+import { getMatchDetails } from "../../redux/events/actions";
 import images from "../../assets/images";
 
-function HomeScreen({ navigation, isOnline }) {
+function HomeScreen({ navigation, isOnline, events, getMatchDetails }) {
   const [showNewMatchModal, canShowNewMatchModal] = React.useState(false);
   const [category, setCategory] = React.useState("soccer");
   const [eventId, setEventId] = React.useState("3081629");
@@ -38,11 +40,34 @@ function HomeScreen({ navigation, isOnline }) {
   };
 
   const onClickDone = () => {
-    console.log("isOnline : ", isOnline);
+    if (isOnline) {
+      console.log("Internet connection available");
+      getMatchDetails(category, eventId, p).done(() => {
+        canShowNewMatchModal(false);
+      });
+    } else {
+      showAlertMessage("Check your Internet connection");
+    }
   };
+
+  console.log("events : ", events);
 
   return (
     <View testID="HomeScreen" style={styles.container}>
+      <ScrollView style={[styles.container]}>
+        {Object.keys(events).map((key, index) => {
+          return (
+            <MatchItem
+              Item={events[key]}
+              onClickItem={() => {
+                navigation.navigate("MatchDetails", {
+                  eventId: key,
+                });
+              }}
+            />
+          );
+        })}
+      </ScrollView>
       <Modal
         testID="ModalNewMatch"
         transparent
@@ -121,6 +146,10 @@ export const bindActions = (dispatch) => {
     showAlertMessage: (header, message, onPress) =>
       dispatch(showAlertMessage(header, message, onPress)),
     canShowPageBusy: (status) => dispatch(canShowPageBusy(status)),
+    getMatchDetails: (category, eventId, p) => {
+      console.log("test test test");
+      return dispatch(getMatchDetails(category, eventId, p));
+    },
   };
 };
 

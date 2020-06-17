@@ -12,7 +12,7 @@ import events from "./events/reducer";
 
 const RootReducer = combineReducers({ app, network, events });
 
-const enhancer = compose(applyMiddleware(thunk, promise));
+const enhancer = compose(applyMiddleware(promise, thunk));
 
 export default (data) => {
   const store = createStore(RootReducer, enhancer);

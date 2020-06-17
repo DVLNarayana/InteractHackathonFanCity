@@ -10,10 +10,12 @@ export function setMatchDetails(eventId, matchDetails) {
   };
 }
 
-export function getMatchDetails(category, EventId, p) {
-  console.log("outside category, EventId, p", category, EventId, p);
-  return (dispatch) => {
-    console.log("category, EventId, p", category, EventId, p);
+export function getCommentaryEntries(eventId) {
+  return (dispatch, getState) => {
+    const com = getState().events[eventId].Com;
+    
+
+
     return getMatchDetailsAPI(category, EventId, p)
       .then((responseData) => {
         dispatch(setMatchDetails(EventId, responseData));

@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../containers/home";
+import MatchDetails from "../containers/matchDetails";
 import { setConnectivity } from "./../redux/network/actions";
 import { NetInfo } from "../components";
 const Stack = createStackNavigator();
@@ -33,6 +34,11 @@ export class RootStack extends React.Component {
             name="Home"
             component={Home}
             options={{ title: "Matches" }}
+          />
+          <Stack.Screen
+            name="MatchDetails"
+            component={MatchDetails}
+            options={{ title: "MatchDetails" }}
           />
         </Stack.Navigator>
       </NavigationContainer>
