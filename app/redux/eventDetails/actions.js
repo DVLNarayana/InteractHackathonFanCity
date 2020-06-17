@@ -38,9 +38,9 @@ export function getCommentaryEntries(eventId) {
           triggerShowInAZone(token, "1E294B387", 3, 158);
         } else if (entries[i].IT == 43) {
           // Yellow card
-          triggerShowInAZone(token, "1E294B387", 3, 102);
+          triggerShowInAZone(token, "1E294B387", 3, 160);
         } else if (entries[i].IT == 77) {
-          triggerShowInAZone(token, "1E294B387", 3, 100);
+          triggerShowInAZone(token, "1E294B387", 3, 159);
         }
       }, i * waitTime * 3000);
     }

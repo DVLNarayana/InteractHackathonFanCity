@@ -3,7 +3,12 @@
 import React, { Component } from "react";
 import { Image } from "react-native";
 import { connect } from "react-redux";
-import { View, ScrollView, CommentaryItem, LiveCam } from "../../components";
+import {
+  View,
+  ScrollView,
+  CommentaryItem,
+  HeaderButton,
+} from "../../components";
 import styles from "./styles";
 import { showAlertMessage, canShowPageBusy } from "../../redux/app/actions";
 import {
@@ -24,6 +29,14 @@ function MatchDetails({
   React.useLayoutEffect(() => {
     navigation.setOptions({
       title: event.T1[0].Nm + " Vs " + event.T2[0].Nm,
+      headerRight: () => (
+        <HeaderButton
+          onPress={() => {
+            navigation.navigate("Stat");
+          }}
+          text="Statistics"
+        />
+      ),
     });
   }, [navigation]);
 

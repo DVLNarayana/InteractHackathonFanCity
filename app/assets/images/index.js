@@ -14,4 +14,5 @@ export default {
     9823: require("./9823.png"),
   },
   football: require("./foodball.jpeg"),
+  matchSentiment: require("./matchSentiment.jpg"),
 };

@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../containers/home";
 import MatchDetails from "../containers/matchDetails";
+import Stat from "../containers/stat";
 import { setConnectivity } from "./../redux/network/actions";
 import { NetInfo } from "../components";
 const Stack = createStackNavigator();
@@ -39,6 +40,11 @@ export class RootStack extends React.Component {
             name="MatchDetails"
             component={MatchDetails}
             options={{ title: "MatchDetails" }}
+          />
+          <Stack.Screen
+            name="Stat"
+            component={Stat}
+            options={{ title: "Match Statistics" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

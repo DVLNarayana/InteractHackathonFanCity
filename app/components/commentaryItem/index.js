@@ -1,12 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {
-  View,
-  Button,
-  TextView,
-  TouchableOpacity,
-  Image,
-} from "../../components";
+import { View, TextView, Image } from "../../components";
 import styles from "./styles";
 import images from "../../assets/images";
 
@@ -27,7 +21,7 @@ const CommentaryItem = (props) => {
         >
           <Image
             source={images.football}
-            style={{ height: 30, weight: 30 }}
+            style={{ flex: 1, height: "100%", width: "100%" }}
             resizeMode="contain"
           />
         </View>
