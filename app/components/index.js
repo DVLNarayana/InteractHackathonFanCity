@@ -29,7 +29,8 @@ import HeaderForModal from "./headerForModals";
 import TextBoxInputWithIcon from "./textBoxInputWithIcon";
 
 import MatchItem from "./matchItem";
-
+import CommentaryItem from "./commentaryItem";
+import LiveCam from "./liveCam";
 export {
   View,
   ScrollView,
@@ -59,4 +60,6 @@ export {
   TextBoxInputWithIcon,
   WebView,
   MatchItem,
+  CommentaryItem,
+  LiveCam,
 };

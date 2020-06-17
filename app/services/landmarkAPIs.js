@@ -1,33 +1,34 @@
-import request from '../utils/request';
+import request from "../utils/request";
 
-const host = 'https://api.interact-lighting.com';
+const host = "https://api.interact-lighting.com";
 
 const landmark_BurlingtonTunnel_setup_service_id =
-  'a069426d-3c9c-4d3b-a042-be5fd61ba1d2';
+  "a069426d-3c9c-4d3b-a042-be5fd61ba1d2";
 const landmark_BurlingtonTunnel_setup_service_secret =
-  '$2a$10$a50Awr7mRVdmMD.Zy0CnUeb8SHqzjDzoJPSumSLQTYbYQ8l9kZG4O';
+  "$2a$10$a50Awr7mRVdmMD.Zy0CnUeb8SHqzjDzoJPSumSLQTYbYQ8l9kZG4O";
 
 const serviceId = landmark_BurlingtonTunnel_setup_service_id;
 const serviceSecret = landmark_BurlingtonTunnel_setup_service_secret;
-const apiKey = 'v0GISyT2Xonan3QrGmrvZL7hdE5M6AcJ';
-const apiSecret = '2Bjj02FnxSWJSYgK';
+const apiKey = "v0GISyT2Xonan3QrGmrvZL7hdE5M6AcJ";
+const apiSecret = "2Bjj02FnxSWJSYgK";
 
-export function getLandmarkAccessToken() {
+export function getLandmarkAccessTokenAPI() {
+  var urlencoded = new URLSearchParams();
+  urlencoded.append("app_key", apiKey);
+  urlencoded.append("app_secret", apiSecret);
+  urlencoded.append("service", "landmark");
+
   const requestURL = `${host}/oauth/accesstoken`;
   const options = {
-    method: 'POST',
-    credentials: 'include',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
+      "Content-Type": "application/x-www-form-urlencoded",
       Authorization:
-        'Basic ' + encodeURIComponent(`${serviceId}:${serviceSecret}`),
-      Accept: 'application/json',
+        "Basic YTA2OTQyNmQtM2M5Yy00ZDNiLWEwNDItYmU1ZmQ2MWJhMWQyOiQyYSQxMCRhNTBBd3I3bVJWZG1NRC5aeTBDblVlYjhTSHF6akR6b0pQU3VtU0xRVFliWVE4bDlrWkc0Tw==",
+      Accept: "application/json",
     },
-    body: JSON.stringify({
-      app_key: apiKey,
-      app_secret: apiSecret,
-      service: 'landmark',
-    }),
+    body: urlencoded,
+    redirect: "follow",
   };
   return new Promise((resolve, reject) => {
     request(requestURL, undefined, options).then(
@@ -36,7 +37,7 @@ export function getLandmarkAccessToken() {
       },
       (e) => {
         reject(e);
-      },
+      }
     );
   });
 }
@@ -45,9 +46,9 @@ export function getSites(token) {
   const requestURL = `${host}/interact/api/landmark/sites`;
   const queryString = null;
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      Accept: '*/*',
+      Accept: "*/*",
       Authorization: `Bearer ${token}`,
     },
   };
@@ -59,7 +60,7 @@ export function getSites(token) {
       },
       (error) => {
         reject(error);
-      },
+      }
     );
   });
 }
@@ -68,21 +69,25 @@ export function getSiteById(token, siteId) {
   const requestURL = `${host}/interact/api/landmark/sites/${siteId}`;
   const queryString = null;
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      Accept: '*/*',
+      Accept: "*/*",
       Authorization: `Bearer ${token}`,
     },
+    redirect: "follow",
   };
 
   return new Promise((resolve, reject) => {
     request(requestURL, queryString, options).then(
       (response) => {
+        if (response.cookies) {
+          console.log("res.cookies : ", res.cookies);
+        }
         resolve(response);
       },
       (error) => {
         reject(error);
-      },
+      }
     );
   });
 }
@@ -91,9 +96,9 @@ export function getCustomButtons(token) {
   const requestURL = `${host}/interact/api/landmark/custombuttons`;
   const queryString = null;
   const options = {
-    method: 'GET',
+    method: "GET",
     headers: {
-      Accept: '*/*',
+      Accept: "*/*",
       Authorization: `Bearer ${token}`,
     },
   };
@@ -105,20 +110,19 @@ export function getCustomButtons(token) {
       },
       (error) => {
         reject(error);
-      },
+      }
     );
   });
 }
 
-export function getConnectionStatus(token, controllerSerial) {
+export function getConnectionStatusAPI(token, controllerSerial) {
   const requestURL = `${host}/interact/api/landmark/tunnel/status`;
   const options = {
-    method: 'POST',
-    credentials: 'include',
+    method: "POST",
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Authorization: `Bearer ${this.session.token}`,
-      Accept: 'application/json',
+      "Content-Type": "application/x-www-form-urlencoded",
+      Authorization: `Bearer ${token}`,
+      Accept: "application/json",
     },
     body: JSON.stringify({
       serial: controllerSerial,
@@ -132,7 +136,7 @@ export function getConnectionStatus(token, controllerSerial) {
       },
       (e) => {
         reject(e);
-      },
+      }
     );
   });
 }
@@ -141,9 +145,9 @@ export function connectController(token, controllerSerial) {
   const requestURL = `${host}/interact/api/landmark/tunnel/connect`;
   const queryString = null;
   const options = {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      Accept: '*/*',
+      Accept: "*/*",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
@@ -157,7 +161,7 @@ export function connectController(token, controllerSerial) {
       },
       (e) => {
         reject(e);
-      },
+      }
     );
   });
 }
@@ -166,9 +170,9 @@ export function disconnectController(token, controllerSerial) {
   const requestURL = `${host}/interact/api/landmark/tunnel/disconnect`;
   const queryString = null;
   const options = {
-    method: 'PUT',
+    method: "PUT",
     headers: {
-      Accept: '*/*',
+      Accept: "*/*",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
@@ -182,7 +186,7 @@ export function disconnectController(token, controllerSerial) {
       },
       (e) => {
         reject(e);
-      },
+      }
     );
   });
 }
@@ -190,12 +194,16 @@ export function disconnectController(token, controllerSerial) {
 export function triggerShowInAZone(token, controllerSerial, zoneId, showId) {
   const requestURL = `${host}/interact/api/landmark/device/${controllerSerial}/api/v1/zones/${zoneId}/shows/${showId}/trigger`;
   const options = {
-    method: 'POST',
-    credentials: 'include',
+    method: "POST",
+    credentials: "include",
     headers: {
-      Authorization: `Bearer ${this.session.token}`,
-      Accept: 'application/json',
+      Authorization: `Bearer ${token}`,
+      Accept: "application/json",
     },
+    body: JSON.stringify({
+      transition_type: "snap",
+      transition_time: 0,
+    }),
   };
 
   return new Promise((resolve, reject) => {
@@ -205,7 +213,7 @@ export function triggerShowInAZone(token, controllerSerial, zoneId, showId) {
       },
       (e) => {
         reject(e);
-      },
+      }
     );
   });
 }

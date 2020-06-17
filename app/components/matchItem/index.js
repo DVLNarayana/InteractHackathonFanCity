@@ -10,6 +10,8 @@ import {
 import styles from "./styles";
 import images from "../../assets/images";
 const MatchItem = (props) => {
+  console.log("MatchItem props : ", props);
+
   return (
     <TouchableOpacity style={styles.container} onPress={props.onClickItem}>
       <View style={styles.partDetailsContainer}>

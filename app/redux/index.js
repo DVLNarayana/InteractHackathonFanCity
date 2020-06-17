@@ -9,8 +9,9 @@ import promise from "./promise";
 import app from "./app/reducer";
 import network from "./network/reducer";
 import events from "./events/reducer";
+import eventsDetails from "./eventDetails/reducer";
 
-const RootReducer = combineReducers({ app, network, events });
+const RootReducer = combineReducers({ app, network, events, eventsDetails });
 
 const enhancer = compose(applyMiddleware(promise, thunk));
 

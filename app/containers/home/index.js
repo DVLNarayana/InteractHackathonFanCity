@@ -50,14 +50,13 @@ function HomeScreen({ navigation, isOnline, events, getMatchDetails }) {
     }
   };
 
-  console.log("events : ", events);
-
   return (
     <View testID="HomeScreen" style={styles.container}>
       <ScrollView style={[styles.container]}>
         {Object.keys(events).map((key, index) => {
           return (
             <MatchItem
+              key={key}
               Item={events[key]}
               onClickItem={() => {
                 navigation.navigate("MatchDetails", {
@@ -138,7 +137,7 @@ function HomeScreen({ navigation, isOnline, events, getMatchDetails }) {
 
 const mapStateToProps = (state) => ({
   isOnline: state.network.isOnline,
-  events: state.events,
+  events: state.events.eventsCollactions,
 });
 
 export const bindActions = (dispatch) => {
@@ -146,10 +145,8 @@ export const bindActions = (dispatch) => {
     showAlertMessage: (header, message, onPress) =>
       dispatch(showAlertMessage(header, message, onPress)),
     canShowPageBusy: (status) => dispatch(canShowPageBusy(status)),
-    getMatchDetails: (category, eventId, p) => {
-      console.log("test test test");
-      return dispatch(getMatchDetails(category, eventId, p));
-    },
+    getMatchDetails: (category, eventId, p) =>
+      dispatch(getMatchDetails(category, eventId, p)),
   };
 };
 
